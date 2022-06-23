@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Produtos</title>
+</head>
+
+<body>
+  <h1>Lista de Produtos</h1>
+
+  <ul>
+
+    <% listaProdutos.forEach(produto=>{ %>
+
+      <li>
+        <%= produto.nome %>
+          <form action="/produtos/deletar/<%= produto.id %>?_method=DELETE" method="post">
+            <!-- //action é o caminho para onde vai ser enviado o formulário
+            //method é o método de envio do formulário
+            //usar a tag do ejs para imprimir o produto deletado -->
+            <button type="submit">deletar</button>
+          </form>
+
+      </li>
+
+      <% }) %>
+
+  </ul>
+
+
+</body>
+
+</html>

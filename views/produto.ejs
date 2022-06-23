@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Cadastro de Produto</h1>
+
+    <% if(typeof errors !== "undefined"){ %>
+    <ul>
+     <% for(let error in errors){%> 
+            <li>
+                <b><%= error %>: </b>
+                <%= errors[error].msg %></li>
+            <% } %>
+    </ul>
+<% } %>
+    <form action="/produtos/criar" enctype="multipart/form-data" method='POST'>
+        <!-- //action é o caminho para onde vai ser enviado o formulário -->
+        <!-- //method é o método de envio do formulário -->
+        <!-- //POST é o método de envio do formulário -->
+        <div>
+            <label for="form-label">Foto do produto</label>
+            <input type="file" class="form-label" name="avatar" id="">
+
+        </div>
+        <br>
+        <div>
+
+            <input type="text" name="nomeProduto" id="">
+
+        </div>
+        <br>
+        <div>
+
+            <input type="number" name="precoProduto" id="">
+        </div>
+        <br>
+        <div>
+
+            <button type="submit">Enviar</button>
+        </div>
+
+    </form>
+</body>
+
+</html>

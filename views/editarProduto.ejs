@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Editar Produto</h1>
+    <form action="/produtos/editar?_method=PUT" method='POST' >
+        <!-- //action é o caminho para onde vai ser enviado o formulário -->
+        <!-- //method é o método de envio do formulário -->
+        <!-- //POST é o método de envio do formulário -->
+        <input type="text" name="nomeProduto" id="" value="<%= produto.nome%>">
+        <!-- // value é o valor que será mostrado no campo de texto. o valor que está na variável produto.nome. -->
+        <input type="number" name="precoProduto" id="" value="<%= produto.preco%>">
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>

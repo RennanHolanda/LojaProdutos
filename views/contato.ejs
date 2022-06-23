@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Olá <%= nomeUsuario %> </h1> 
+    <!-- // é o nome do usuário que está na sessão atual e que foi passado pelo controller no momento do login e que foi armazenado na sessão atual. usa a tag do ejs para imprimir o nome do usuário. -->
+    <form action="/confirmarcontato" method="GET">
+        <!-- //action é o caminho para onde vai ser enviado o formulário -->
+        <!-- //method é o método de envio do formulário -->
+        <input type="text" name="nome" id="">
+        <input type="email" name="email" id="">
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+
+</html>
